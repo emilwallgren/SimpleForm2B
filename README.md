@@ -1,6 +1,6 @@
 SimpleForm2B - README
 =====================
-A simple form-creator for Anax MVC. Supports all input-types, textarea and submit.
+A simple form-creator for Anax MVC built with php. Supports all input-types, textarea and submit.
 
 Installation
 ------------
@@ -40,6 +40,18 @@ How to use them is explained below
 
 ### SetForm()
 SetForm opens the form and contains 3 parameters:
+1. Method
+2. Action
+3. Class
+
+These three parameters are not optional and should always be set before using other methods.
+An example where I create a new form with the method of post, the action of url:register/check and the class of registerForm should hence look like this:
+```php 
+$auth->setForm('post', $this->url->create('register/check'), 'registerForm');
+```
+
+```
+
 
 
 
