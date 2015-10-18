@@ -40,6 +40,7 @@ How to use them is explained below
 
 ### SetForm()
 SetForm() opens the form and contains 3 parameters:
+
 1. Method
 2. Action
 3. Class
@@ -52,6 +53,7 @@ $auth->setForm('post', $this->url->create('register/check'), 'registerForm');
 
 ### SetInput()
 SetInput() creates an input type and contains 6 parameters:
+
 1. type
 2. name
 3. value - optional
