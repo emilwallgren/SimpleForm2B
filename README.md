@@ -93,5 +93,23 @@ This method is quite self-explanatory but if you want to create a submit button 
 $auth->setSubmit('submitThis', 'Send');
 ```
 
+### saveForm()
+saveForm() should always be included after all other methods are set. It contains 0 parameters and offers you a way to save the form into a variable which you can pass along to the view. An example of saving the form into the variable $myNewForm would look like this:
 
+```php
+$myNewForm = $auth->saveForm();
+```
 
+When passing along the variable to the view, it should always be named 'form'. An example on how to implement this into Anax-Mvc would be:
+
+```php
+$this->views->add('simpleform2b/simpleform2b', [
+				'form' => $myNewForm
+				]);
+```
+
+Finally
+-------
+With SimpleForm2B, you can easily create forms in lightning speed. The above information should be everything you need to know. If you still end up with problems, you are free to contact me at emil.wallgren@hotmail.se
+
+Have Fun!
