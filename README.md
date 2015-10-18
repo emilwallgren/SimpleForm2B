@@ -38,8 +38,9 @@ SimpleForm2B contains 5 different methods.
 
 How to use them is explained below
 
-SetForm()
-###
+### SetForm()
+SetForm opens the form and contains 3 parameters:
+
 
 
 
