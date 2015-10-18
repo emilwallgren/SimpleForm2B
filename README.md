@@ -39,7 +39,7 @@ SimpleForm2B contains 5 different methods.
 How to use them is explained below
 
 ### SetForm()
-SetForm opens the form and contains 3 parameters:
+SetForm() opens the form and contains 3 parameters:
 1. Method
 2. Action
 3. Class
@@ -50,6 +50,19 @@ An example where I create a new form with the method of post, the action of url:
 $auth->setForm('post', $this->url->create('register/check'), 'registerForm');
 ```
 
+### SetInput()
+SetInput() creates an input type and contains 6 parameters:
+1. type
+2. name
+3. value - optional
+4. id - optional
+5. label - optional
+6. placeholder - optional
+
+If you choose not to use a parameter, define NULL in it's place.
+An example where I create an input-field with the type of text, name of username, no-value, id of username, label of Insert Username and no-placeholder would look like this:
+```php
+$auth->setInput('text', 'username', NULL, 'username', 'Insert Username', NULL);
 ```
 
 
