@@ -30,16 +30,16 @@ $auth = new \emildev\SimpleForm2B\SimpleForm2B();
 Usage - using the the SimpleForm2B object
 -----------------------------------------
 SimpleForm2B contains 5 different methods.
-* SetForm()
-* SetInput()
-* SetTextArea()
+* setForm()
+* setInput()
+* setTextArea()
 * setSubmit()
 * saveForm()
 
 How to use them is explained below
 
-### SetForm()
-SetForm() opens the form and contains 3 parameters:
+### setForm()
+setForm() opens the form and contains 3 parameters:
 
 1. Method
 2. Action
@@ -51,8 +51,8 @@ An example where I create a new form with the method of post, the action of url:
 $auth->setForm('post', $this->url->create('register/check'), 'registerForm');
 ```
 
-### SetInput()
-SetInput() creates an input type and contains 6 parameters:
+### setInput()
+setInput() creates an input type and contains 6 parameters:
 
 1. type
 2. name
@@ -61,13 +61,37 @@ SetInput() creates an input type and contains 6 parameters:
 5. label - optional
 6. placeholder - optional
 
-If you choose not to use a parameter, define NULL in it's place.
+If you choose not to use a parameter, define NULL in it's place. You can create how many input-fields you want. They will show up in the order you write them in the controller.
 An example where I create an input-field with the type of text, name of username, no-value, id of username, label of Insert Username and no-placeholder would look like this:
 ```php
 $auth->setInput('text', 'username', NULL, 'username', 'Insert Username', NULL);
 ```
+### setTextArea()
+setTextArea() creates a textarea for your form. It consists of 5 parameters:
 
+1. name
+2. value - optional
+3. id - optional
+4. label - optional
+5. placeholder - optional
 
+If you choose not to use a parameter, define NULL in it's place. You can only create one textarea for each form, and it will always end up under the input-fields. An example where I create a textarea with the name of textarea, no-value, no-id, label of Write info and no-placeholder would look like this:
+
+```php
+$auth->setTextArea('textarea', NULL, NULL, 'Write info', NULL);
+```
+
+### setSubmit()
+setSubmit() creates a submit-button at the bottom of your form. It has 2 non-optional parameters:
+
+1. name
+2. value
+
+This method is quite self-explanatory but if you want to create a submit button which contains the name of submitThis and a value of Send, this is how you write it in your controller:
+
+```php
+$auth->setSubmit('submitThis', 'Send');
+```
 
 
 
