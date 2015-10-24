@@ -7,7 +7,7 @@ php:
   - nightly
 
 before_script:
-	- wget https://scrutinizer-ci.com/ocular.phar
+    - wget https://scrutinizer-ci.com/ocular.phar
  
 script:
     #- phpunit --bootstrap test/config.php test
