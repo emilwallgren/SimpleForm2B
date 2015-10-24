@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/emilwallgren/SimpleForm2B.svg?branch=master)](https://travis-ci.org/emilwallgren/SimpleForm2B) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/emilwallgren/SimpleForm2B/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/emilwallgren/SimpleForm2B/?branch=master)
+
 SimpleForm2B - README
 =====================
 A simple form-creator for Anax MVC built with php. Supports all input-types, textarea and submit.
